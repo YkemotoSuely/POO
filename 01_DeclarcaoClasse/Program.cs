@@ -32,6 +32,34 @@ namespace _01_DeclarcaoClasse
             obj5.Base = 7;
             obj5.Altura = 8;
             obj5.ImprimeArea();
+
+
+            Conta obj6 = new Conta();
+            obj6.Banco = 123;
+            obj6.Agencia = "011";
+            obj6.Numero = "1234-5";
+            obj6.Saldo = 500.00;
+            obj6.Limite = 500.00;
+
+            obj6.Sacar(220);
+            Console.WriteLine($" Saldo atual: {obj6.ConsultaSaldo()}");
+
+            obj6.Depositar(1000.55);
+            Console.WriteLine($"Saldo atual: {obj6.ConsultaSaldo()}");
+
+            obj6.ConsultaSaldo();
+
+
+            Aluno obj7 = new Aluno();
+            obj7.Codigo = 22;
+            obj7.Nome = "Carol";
+            obj7.Notas = [9.6, 8.0, 9.5, 10.0];
+            
+
+            obj7.LancarNotas();
+            obj7.CalcularMedia();
+            obj7.Mencao();
+
         }
     }
 
@@ -101,9 +129,73 @@ namespace _01_DeclarcaoClasse
             Console.WriteLine($"Triangulo com base de {Base} e altura de {Altura}, possue uma área de {CalculaArea()}");
         }
     }
+    public class Conta
+    {
+        public int Banco;
+        public string Agencia, Numero;
+        public double Saldo, Limite;
 
+        // Método para depositar
+        public void Depositar(double valor)
+        {
+           
+                Saldo += valor;
+                //Console.WriteLine($"Depósito de R${valor} realizado com sucesso.");
+          
+        }
 
+        // Método para sacar
+        public void Sacar(double valor)
+        {
+            Saldo = Saldo - valor;
         
-    
+        }
+        public double ConsultaSaldo()
+        { 
+             return Saldo;
+        }
+    }
+    public class Aluno
+    {
+        public int Codigo;
+        public string Nome;
 
+        // Arrays para armazenar as notas
+        public double[] notas = new double[4];
+
+        // Método para lançar notas nos bimestres
+        public void LancarNotas()
+        {
+            Notas[trimestre - 1] = notas; 
+           
+        }
+        
+        // Método para exibir as notas
+        public void ExibirNotas()
+        {
+            Console.WriteLine($"\nNotas do aluno {Nome}:");
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine($"Bimestre {bimestres[i]}: Nota {notas[i]}");
+            }
+        }
+
+        // Método para calcular a média
+        public double CalcularMedia()
+        {
+            double media = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                media += notas[i];
+            }
+            return media / 4;
+        }
+        public string Mencao()
+        {
+            if (CalcularMedia() >= 5)
+                return "Aprovado";
+            else
+                return "Reprovado";
+        }
+    }
 }
