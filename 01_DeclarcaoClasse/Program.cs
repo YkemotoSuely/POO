@@ -50,16 +50,26 @@ namespace _01_DeclarcaoClasse
             obj6.ConsultaSaldo();
 
 
-            Aluno obj7 = new Aluno();
+           /* Aluno obj7 = new Aluno();
             obj7.Codigo = 22;
             obj7.Nome = "Carol";
-            obj7.Notas = [9.6, 8.0, 9.5, 10.0];
-            
+            obj7.Notas
 
-            obj7.LancarNotas();
+
+            obj7.LancarNotas(new double[] { 9.6, 8.0, 9.5, 10.0 });
             obj7.CalcularMedia();
             obj7.Mencao();
+           */
+           Aluno alunoSuely = new Aluno();
 
+            alunoSuely.Codigo = 1;
+            alunoSuely.Nome = "Suely";
+            alunoSuely.LancarNota(1, 8.6);
+            alunoSuely.LancarNota(2, 9.0);
+            alunoSuely.LancarNota(3, 9.5);
+            alunoSuely.LancarNota(4, 10.0);
+
+            Console.WriteLine($"Aluno {alunoSuely.Nome} {alunoSuely.Mencao()} com média de {alunoSuely.CalcularMedia():N2}");
         }
     }
 
@@ -161,41 +171,35 @@ namespace _01_DeclarcaoClasse
         public string Nome;
 
         // Arrays para armazenar as notas
-        public double[] notas = new double[4];
+        public double[] Notas = new double[4];
 
         // Método para lançar notas nos bimestres
-        public void LancarNotas()
+        public void LancarNota(int trimestre, double nota)
         {
-            Notas[trimestre - 1] = notas; 
-           
+                Notas[trimestre - 1 ]= nota;
+
         }
         
-        // Método para exibir as notas
-        public void ExibirNotas()
-        {
-            Console.WriteLine($"\nNotas do aluno {Nome}:");
-            for (int i = 0; i < 4; i++)
-            {
-                Console.WriteLine($"Bimestre {bimestres[i]}: Nota {notas[i]}");
-            }
-        }
 
         // Método para calcular a média
         public double CalcularMedia()
         {
             double media = 0;
-            for (int i = 0; i < 4; i++)
+
+            foreach (double nota in Notas)
             {
-                media += notas[i];
+                media += nota;
             }
-            return media / 4;
+            return media / 4.0;
         }
         public string Mencao()
         {
-            if (CalcularMedia() >= 5)
-                return "Aprovado";
-            else
-                return "Reprovado";
+            // if (CalcularMedia() >= 5)
+            //     return "Aprovado";
+            // else
+            //     return "Reprovado";
+
+            return (CalcularMedia() >= 5.0) ? "Aprovado" : "Reprovado";
         }
     }
 }
