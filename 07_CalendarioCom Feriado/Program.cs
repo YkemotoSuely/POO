@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _06_Calendario
+namespace _07_CalendarioComFeriado
 {
     internal class Program
     {
@@ -16,7 +16,7 @@ namespace _06_Calendario
             {
 
                 calendario = new Calendario(ano, mes);
-                calendario.ImprimeCalendario();
+                calendario.ImprimirCalendario();
 
                 Console.WriteLine("\n\n");
             }
