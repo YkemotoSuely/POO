@@ -43,7 +43,13 @@ public class Aluno
         set
         {
             if (value >= 0)
-                idade = value;
+            { idade = value; }
+            else
+            {
+                Console.WriteLine("Idade inválida");
+
+
+            }
         }
     }
 
