@@ -42,7 +42,7 @@ namespace _15__ColecaoDictionary
 
         public virtual void ImprimirAluno()
         {
-            Console.WriteLine($" - RA: {this.ra} Nome: {this.Nome}");
+            Console.WriteLine($" \n RA: {this.ra} - Nome: {this.Nome}");
         }
     }
 }
