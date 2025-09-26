@@ -35,6 +35,76 @@ namespace _10_Colecoes
                 //Console.WriteLine($" - ID: {aluno.id} Nome: {aluno.Nome}");
                 aluno.ImprimirAluno();
             }
+            Dictionary<int,String> dicNomes = new Dictionary<int,String>();
+            dicNomes.Add(1, "Gustavo");
+            dicNomes.Add(2, "Celso");
+            dicNomes.Add(3, "Suely");
+
+            //Dicionário não aceita chaves duplicadas
+
+            for (int i = 1; i <= dicNomes.Count; i++) 
+            {
+                Console.WriteLine($" - {dicNomes[i]}");
+
+            }
+            Dictionary<int, Aluno> dicAlunos = new Dictionary<int, Aluno>();
+            dicAlunos.Add(suely.id, suely);
+            dicAlunos.Add(celso.id, celso);
+
+            Console.WriteLine("Impressão dos alunos");
+            //for (int i = 1; i <= dicAlunos.Count; i++) 
+            //{
+            //    dicAlunos[i].ImprimirAluno();
+            //}
+
+            foreach (Aluno aluno in dicAlunos.Values) 
+            {
+                aluno.ImprimirAluno(); 
+            }
+
+
+            Queue<String> filaNomes = new Queue<String>();
+            filaNomes.Enqueue("Gustavo");
+            filaNomes.Enqueue("Celso");
+            filaNomes.Enqueue("Suely");
+
+            Console.WriteLine("Impressão dos filaNomes");
+            Console.WriteLine($"1º) {filaNomes.Dequeue()}");
+
+            foreach (String nome in filaNomes)
+            {
+                Console.WriteLine($" - {nome}");               
+
+            }
+            Stack<String> stackNomes = new Stack<String>();
+            stackNomes.Push("Gustavo");
+            stackNomes.Push("Celso");
+            stackNomes.Push("Suely");
+
+            Console.WriteLine("Impressão dos stackNomes");
+            Console.WriteLine($" 1º) {stackNomes.Pop()}");
+
+            foreach (String nome in stackNomes)
+            {
+
+                Console.WriteLine($" - {nome}");
+            }
+            HashSet<string> setNomes = new HashSet<string>();
+
+            setNomes.Add("Gustavo");
+            setNomes.Add("Celso");
+            setNomes.Add("Suely");
+            //ignora valores duplicados
+            setNomes.Add("Gustavo");
+            setNomes.Add("Celso");
+            setNomes.Add("Suely");
+
+            Console.WriteLine("Impressão dos SetNomes");
+            foreach (String nome in setNomes) 
+            { 
+                Console.WriteLine($" - {nome}"); 
+            }
+
         }
     }
     class Aluno 
