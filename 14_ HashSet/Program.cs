@@ -22,7 +22,7 @@ namespace _14__HashSet
             setNumeros.Add(79);
             setNumeros.Add(93);
 
-            Console.WriteLine("Impressão dos SetNomes");
+            Console.WriteLine("Impressão dos SetNumeros");
             foreach (int numero in setNumeros)
             {
                 Console.WriteLine($" - {numero}");
