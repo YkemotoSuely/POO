@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("17_Enum")]
+[assembly: AssemblyTitle("17_Calendario")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("17_Enum")]
+[assembly: AssemblyProduct("17_Calendario")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
-[assembly: Guid("67b0e579-0496-4818-b3fc-7dc129899ef5")]
+[assembly: Guid("3d9960f4-1c64-4bae-be7f-1f62baf52951")]
 
 // As informações da versão de um assembly consistem nos quatro valores a seguir:
 //
