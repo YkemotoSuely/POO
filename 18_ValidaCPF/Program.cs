@@ -15,12 +15,13 @@ namespace _18_ValidaCPF
                 Console.WriteLine("CPF VÁLIDO!");
             else
                 Console.WriteLine("CPF INVÁLIDO!");
+
         }
     }
 }
 
 
-/*//Função de cada arquivo
+/*Função de cada arquivo
 
 IDocumento.cs: Define a interface com a propriedade Numero e o método Validar().
 CPF.cs: Implementa a interface IDocumento, recebe o CPF, limpa os caracteres e valida os dígitos.
