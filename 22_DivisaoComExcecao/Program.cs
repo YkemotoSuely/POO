@@ -31,6 +31,10 @@ namespace _22_DivisaoComExcecao
             {
                 Console.WriteLine("\nNão é possível dividir por zero!");
             }
+            finally
+            {
+                Console.WriteLine("Operação finalizada.Obrigado por utilizar o programa");
+            }
 
             Console.ReadKey();
         }
